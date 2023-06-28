@@ -59,6 +59,10 @@ function __git.init
   __git.create_abbr gcpc       git cherry-pick --continue
   __git.create_abbr gd         git diff
   __git.create_abbr gdca       git diff --cached
+  __git.create_abbr gdo        git diff origin/\(__git.current_branch\)
+  __git.create_abbr gdom       git diff origin/\(__git.default_branch\)
+  __git.create_abbr gdu        git diff upstream/\(__git.current_branch\)
+  __git.create_abbr gdum       git diff upstream/\(__git.default_branch\)
   __git.create_abbr gds        git diff --stat
   __git.create_abbr gdsc       git diff --stat --cached
   __git.create_abbr gdt        git diff-tree --no-commit-id --name-only -r
@@ -107,9 +111,15 @@ function __git.init
   __git.create_abbr grbm       git rebase \(__git.default_branch\)
   __git.create_abbr grbmi      git rebase \(__git.default_branch\) --interactive
   __git.create_abbr grbmia     git rebase \(__git.default_branch\) --interactive --autosquash
+  __git.create_abbr grbo       git rebase origin/\(__git.current_branch\)
+  __git.create_abbr grboi      git rebase origin/\(__git.current_branch\) --interactive
+  __git.create_abbr grboia     git rebase origin/\(__git.current_branch\) --interactive --autosquash
   __git.create_abbr grbom      git rebase origin/\(__git.default_branch\)
   __git.create_abbr grbomi     git rebase origin/\(__git.default_branch\) --interactive
   __git.create_abbr grbomia    git rebase origin/\(__git.default_branch\) --interactive --autosquash
+  __git.create_abbr grbum      git rebase upstream/\(__git.default_branch\)
+  __git.create_abbr grbumi     git rebase upstream/\(__git.default_branch\) --interactive
+  __git.create_abbr grbumia    git rebase upstream/\(__git.default_branch\) --interactive --autosquash
   __git.create_abbr grbd       git rebase develop
   __git.create_abbr grbdi      git rebase develop --interactive
   __git.create_abbr grbdia     git rebase develop --interactive --autosquash
@@ -118,6 +128,8 @@ function __git.init
   __git.create_abbr grev       git revert
   __git.create_abbr grh        git reset
   __git.create_abbr grhh       git reset --hard
+  __git.create_abbr grh1       git reset HEAD~1
+  __git.create_abbr grhh1      git reset --hard HEAD~1
   __git.create_abbr grhpa      git reset --patch
   __git.create_abbr grm        git rm
   __git.create_abbr grmc       git rm --cached
@@ -147,7 +159,9 @@ function __git.init
   __git.create_abbr gts        git tag -s
   __git.create_abbr gtv        git tag | sort -V
   __git.create_abbr gsw        git switch
+  __git.create_abbr gsm        git switch \(__git.default_branch\)
   __git.create_abbr gswc       git switch --create
+  __git.create_abbr gswd       git switch --detach
   __git.create_abbr gunignore  git update-index --no-assume-unchanged
   __git.create_abbr gup        git pull --rebase
   __git.create_abbr gupv       git pull --rebase -v
