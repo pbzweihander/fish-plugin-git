@@ -27,6 +27,7 @@ function __git.init
   __git.create_abbr gban       git branch -a -v --no-merged
   __git.create_abbr gbd        git branch -d
   __git.create_abbr gbD        git branch -D
+  __git.create_abbr gbm        git branch -m
   __git.create_abbr ggsup      git branch --set-upstream-to=origin/\(__git.current_branch\)
   __git.create_abbr gbl        git blame -b -w
   __git.create_abbr gbs        git bisect
