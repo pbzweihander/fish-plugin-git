@@ -121,6 +121,12 @@ function __git.init
   __git.create_abbr grbum      git rebase upstream/\(__git.default_branch\)
   __git.create_abbr grbumi     git rebase upstream/\(__git.default_branch\) --interactive
   __git.create_abbr grbumia    git rebase upstream/\(__git.default_branch\) --interactive --autosquash
+  __git.create_abbr grbomf     "git fetch origin (__git.default_branch); and git rebase FETCH_HEAD"
+  __git.create_abbr grbomfi    "git fetch origin (__git.default_branch); and git rebase FETCH_HEAD --interactive"
+  __git.create_abbr grbomfia   "git fetch origin (__git.default_branch); and git rebase FETCH_HEAD --interactive --autosquash"
+  __git.create_abbr grbumf     "git fetch upstream (__git.default_branch); and git rebase FETCH_HEAD"
+  __git.create_abbr grbumfi    "git fetch upstream (__git.default_branch); and git rebase FETCH_HEAD --interactive"
+  __git.create_abbr grbumfia   "git fetch upstream (__git.default_branch); and git rebase FETCH_HEAD --interactive --autosquash"
   __git.create_abbr grbd       git rebase develop
   __git.create_abbr grbdi      git rebase develop --interactive
   __git.create_abbr grbdia     git rebase develop --interactive --autosquash
