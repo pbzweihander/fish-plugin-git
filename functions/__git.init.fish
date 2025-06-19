@@ -168,6 +168,7 @@ function __git.init
   __git.create_abbr gsw        git switch
   __git.create_abbr gsm        git switch \(__git.default_branch\)
   __git.create_abbr gswc       git switch --create
+  __git.create_abbr gswfc      git switch --force-create
   __git.create_abbr gswd       git switch --detach
   __git.create_abbr gunignore  git update-index --no-assume-unchanged
   __git.create_abbr gup        git pull --rebase
