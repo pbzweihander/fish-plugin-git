@@ -131,7 +131,7 @@ gunwip           # restore work in progress
 | gban         | `git branch -a -v --no-merged`                       |
 | gbd          | `git branch -d`                                      |
 | gbD          | `git branch -D`                                      |
-| gbda         | delete all branches merged in current HEAD           |
+| gbda         | delete all branches merged in current HEAD, add `--gone` to include branches that have been deleted on remote |
 | gbage        | list local branches and display their age            |
 | ggsup        | `git branch --set-upstream-to=origin/(__git.current_branch)`  |
 | grename      | rename _old_ branch to _new_, including in origin remote      |
@@ -350,8 +350,10 @@ gunwip           # restore work in progress
 | gfm          | `git fetch origin (__git.default_branch) --prune; and git merge FETCH_HEAD` |
 | gfo          | `git fetch origin`                                          |
 | gm           | `git merge`                                                 |
+| gma          | `git merge --abort`                                         |
 | gmt          | `git mergetool --no-prompt`                                 |
 | gmom         | `git merge origin/(__git.default_branch)`                   |
+| grel         | Print path relative to repository root                      |
 | grev         | `git revert`                                                |
 | grh          | `git reset HEAD`                                            |
 | grhh         | `git reset HEAD --hard`                                     |
